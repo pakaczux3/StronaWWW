@@ -1,0 +1,2 @@
+# StronaWWW
+Moja stronka
