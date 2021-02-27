@@ -1,0 +1,189 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Contact</title>
+    <meta name="Contact Page" content="Contact Page" />
+    <meta name="XXXXX" content="SitePoint" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+
+  <body>
+    <header class="bg-dark">
+      <nav class="navbar navbar-dark bg-dark navbar-expand-sm container">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="https://picsum.photos/id/1032/200/300"
+            width="30"
+            height="30"
+            alt="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-list-2"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-list-2">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutme.html">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <header class="masthead masthead__contact">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h1 class="font-weight-light h1">Get in touch</h1>
+            <p class="lead">Write me about your project</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="mb-4 container mx-auto">
+      <h3 class="display-4 text-center my-5">Contact us</h3>
+      <p class="text-center w-responsive mx-auto mb-5 w-50">
+        Do you have any questions? Please do not hesitate to contact us
+        directly. Our team will come back to you within a matter of hours to
+        help you.
+      </p>
+      <div class="row">
+        <div class="col col-md-6 mx-auto mb-md-0 mb-5">
+          <form
+            id="contact-form"
+            name="contact-form"
+            action="test@example.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="row">
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    required
+                  />
+                  <label for="name" class="my-1">Your name</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    required
+                  />
+                  <label for="email" class="my-1">Your email</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="md-form mb-0">
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-control"
+                    required
+                  />
+                  <label for="subject" class="my-1">Subject</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="md-form">
+                  <textarea
+                    type="text"
+                    id="message"
+                    name="message"
+                    rows="2"
+                    class="form-control md-textarea"
+                    required
+                  ></textarea>
+                  <label for="message" class="my-1">Your message</label>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="text-center text-md-left">
+            <a
+              class="btn btn-success"
+              onclick="document.getElementById('contact-form').submit();"
+              >Send</a
+            >
+          </div>
+          <div class="status"></div>
+        </div>
+        <h3 class="text-center mt-5 pt-5 display-4">FIND US!</h3>
+        <div id="map"></div>
+      </div>
+    </section>
+
+    <footer class="container">
+      <p>
+        © 2017-<span id="year"> </span> Company, Inc. ·
+        <a href="#">Privacy</a> · <a href="#">Terms</a>
+      </p>
+    </footer>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0Q4bDeN05dPoYnu-WJLtPT7MCg1sBMlk&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script>
+      window.onload = () => {
+        let year = moment().format("YYYY");
+        $("#year").text(year);
+      };
+    </script>
+
+    <script src="./script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
